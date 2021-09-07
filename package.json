@@ -17,7 +17,7 @@
     "web-vitals": "^1.0.1",
     "deck.gl": "^8.4.16",
     "geojson": "^0.5.0",
-    "nebula.gl": "^0.22.3",
+    "nebula.gl": "^0.23.3",
     "react-map-gl": "^6.1.15"
   },
   "devDependencies": {
@@ -27,7 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "find ./node_modules/@types -type d -name \"deck.gl*\" -exec rm -rv {} + && rm -rf ./node_modules/@danmarshall/deckgl-typings"
   },
   "eslintConfig": {
     "extends": [
